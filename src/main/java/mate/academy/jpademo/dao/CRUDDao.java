@@ -1,8 +1,9 @@
 package mate.academy.jpademo.dao;
 
+import java.io.Serializable;
 import java.util.List;
 
-public interface CRUDDao<T, ID> {
+public interface CRUDDao<T, ID extends Serializable> {
 
     T save(T entity);
 

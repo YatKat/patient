@@ -18,6 +18,7 @@ public class AccessoryDaoImpl extends AbstractDao implements AccessoryDao {
     public Accessory save(Accessory entity) {
         Session session = sessionFactory.openSession();
         session.save(entity);
+        session.close();
         return entity;
     }
 
