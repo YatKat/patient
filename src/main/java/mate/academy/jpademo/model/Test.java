@@ -30,8 +30,6 @@ public class Test {
     private Patient patient;
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "setOfTests")
-//    @JoinTable(name = "devices_tests", joinColumns = {@JoinColumn(name = "test_id")},
-//            inverseJoinColumns = {@JoinColumn(name = "device_id")})
     private Set<Device> deviceSet = new HashSet<>();
 
     public void addDevice(Device device) {

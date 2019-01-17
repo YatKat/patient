@@ -22,13 +22,9 @@ public class Device {
     private String brand;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "deviceSet")
-//    @JoinTable(name = "devices_accessory", joinColumns = {@JoinColumn(name = "device_id")},
-//            inverseJoinColumns = {@JoinColumn(name = "accessory_id")})
     private Set<Accessory> accessorySet = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.LAZY)
-//    @JoinTable(name = "devices_tests", joinColumns = {@JoinColumn(name = "device_id")},
-//    inverseJoinColumns = {@JoinColumn(name = "test_id")})
     private Set<Test> setOfTests = new HashSet<>();
 
     public void addTest(Test test) {
